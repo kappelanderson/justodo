@@ -1,0 +1,150 @@
+
+
+@font-face {
+    font-family: 'Koulen';
+    src: url('./fonts/Koulen-Regular.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
+@font-face {
+    font-family: 'Poppins';
+    src: url('./fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
+@font-face {
+    font-family: 'PoppinsBold';
+    src: url('./fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
+
+//Koulen font
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(251, 251, 251);
+
+}
+#nav{
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    box-sizing: border-box;
+
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    hr{
+        padding: 0px;
+    }
+    #logo{
+        margin-bottom: 50px;
+        display: flex;
+        width: 100%;
+        align-items: flex-start;
+        flex-direction: column;
+        h1{
+            padding-left: 20px;
+            font-family: 'PoppinsBold';
+            font-size: 30px;
+            color: rgb(0, 94, 255);
+        }
+        hr{
+            width: 100%;
+        }
+
+    }
+    #yourtasks, #yourprojects{
+        padding-left: 20px;
+    }
+    h2{
+        font-family: 'PoppinsBold';
+        font-size: 23px;
+    }
+    p{
+        font-family: 'Poppins';
+        font-size: 20px;
+    }
+    .yourtasks{
+        display: flex;
+        align-items: center;
+        .icon{
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+        }
+        p{
+            display: inline;
+        }
+        
+    }
+    .yourtasks:hover{
+        width: 100%;
+        padding: 3px;
+        background-color: rgb(238, 238, 238);
+        border-radius: 10px;
+        cursor: pointer;
+        p{
+            font-size: 25px;
+
+        }
+        animation-duration: 1000ms;
+    }
+
+
+    .project{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6px;
+        .iconproject{
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background-image: url(icons/construction.svg);
+        }
+        .icontrash{
+            margin-left: 20px;
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background-image: url(icons/delete.svg);
+
+        }
+        p{
+            display: inline;
+        }
+        
+    }
+    .project:hover{
+        width: 100%;
+        padding: 3px;
+        background-color: rgb(238, 238, 238);
+        border-radius: 10px;
+        cursor: pointer;
+        p{
+            font-size: 25px;
+
+        }
+        animation-duration: 1000ms;
+    }
+    #thismonthtasks{
+        .icon{
+            background-image: url(icons/calendarmonth.svg);
+        }
+    }
+    #todaytasks{
+        .icon{
+            background-image: url(icons/calendartoday.svg);
+        }
+    }
+    #thisweektasks{
+        .icon{
+            background-image: url(icons/calendarweek.svg);
+        }
+    }
+}
