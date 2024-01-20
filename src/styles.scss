@@ -18,6 +18,10 @@
     font-weight: 600;
     font-style: normal;
   }
+  $primaryfont: 'Poppins';
+  $primaryfontBold: 'PoppinsBold';
+  $secondaryFont: 'Koulen';
+  $primarycolor: rgb(255, 68, 68);
 
 //Koulen font
 *{
@@ -25,11 +29,13 @@
     padding: 0;
 }
 body{
+    display: flex;
     background-color: rgb(251, 251, 251);
 
 }
+// NAV COMPONENT
 #nav{
-    background-color: rgb(251, 251, 251);
+    background-color: rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.1) 1.95px 1.95px 1.95px;
     box-sizing: border-box;
 
@@ -52,13 +58,14 @@ body{
             padding-left: 20px;
             font-family: 'Koulen';
             font-size: 30px;
-            color: rgb(65, 65, 65);
-            p{
+            color: rgb(255, 68, 68);
+            img{
                 margin-right: 2px;
                 display: inline-block;
                 width: 25px;
                 height: 25px;
                 background-image: url(icons/target.svg);
+                fill:  rgb(78, 99, 255);
             }
         }
         hr{
@@ -142,7 +149,37 @@ body{
         border-radius: 10px;
         cursor: pointer;
         p{
-            font-size: 25px;
+            font-size: 23px;
+
+        }
+        animation-duration: 1000ms;
+    }
+
+
+    .addproject{
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        .iconproject{
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background-image: url(icons/add.svg);
+        }
+
+        p{
+            display: inline;
+        }
+        
+    }
+    .addproject:hover{
+        width: 100%;
+        padding: 3px;
+        background-color: rgb(238, 238, 238);
+        border-radius: 10px;
+        cursor: pointer;
+        p{
+            font-size: 23px;
 
         }
         animation-duration: 1000ms;
@@ -160,6 +197,77 @@ body{
     #thisweektasks{
         .icon{
             background-image: url(icons/calendarweek.svg);
+        }
+    }
+    #diary{
+        margin: 20px 0px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding-left: 10px;
+        p{
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background-image: url(./icons/diary.svg);
+        }
+
+    }
+    #diary:hover{
+        width: 85%;
+        padding: 3px;
+        background-color: rgb(238, 238, 238);
+        border-radius: 10px;
+        cursor: pointer;
+        h2{
+            font-size: 21px;
+
+        }
+        animation-duration: 1000ms;
+    }
+}
+
+// MAIN COMPONENT
+#addtaskbtn{
+    border-radius: 50%;
+    margin: 10px;
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    background-color: $primarycolor;
+    p{
+        fill: white;
+        width: 25px;
+        height: 25px;
+        color: white;
+        background-image: url('icons/add.svg');
+    }
+}
+#main{
+    font-family: $primaryfont;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    h1{
+        color: $primarycolor;
+
+    }
+    h2, h1{
+        font-family: $primaryfontBold;
+
+    }
+    #header{
+        span{
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background-image: url('./icons/calendartoday.svg');
         }
     }
 }
